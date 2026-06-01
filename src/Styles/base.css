@@ -1,0 +1,53 @@
+﻿.section {
+  padding: 90px 6%;
+}
+
+.sec-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--terracotta);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.sec-label::before {
+  content: '';
+  width: 24px;
+  height: 1.5px;
+  background: var(--terracotta);
+  display: inline-block;
+}
+
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.sec-title .it {
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.sec-sub {
+  font-size: 15px;
+  color: var(--stone);
+  line-height: 1.75;
+  max-width: 480px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-white,
+.btn-outline-white,
+.btn-wa,
+.nav-cta-btn {
+  transition: all 0.3s ease;
+}

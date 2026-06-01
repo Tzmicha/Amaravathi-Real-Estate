@@ -1,0 +1,164 @@
+﻿@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes drawLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility animation classes */
+.animate-fadeUp { animation: fadeUp 0.7s var(--delay, 0s) ease both; }
+.animate-fadeIn { animation: fadeIn 0.6s var(--delay, 0s) ease both; }
+.animate-scaleIn { animation: scaleIn 0.6s var(--delay, 0s) cubic-bezier(.2,.9,.3,1) both; }
+.animate-slideRight { animation: slideRight 0.7s var(--delay, 0s) ease both; }
+
+/* Stagger helper: set --delay on children, e.g. style={{'--delay': '0.12s'}} */
+.stagger > * { opacity: 0; transform: translateY(12px); }
+.stagger > *.animate-fadeIn,
+.stagger > *.animate-fadeUp,
+.stagger > *.animate-scaleIn,
+.stagger > *.animate-slideRight { opacity: 1; transform: none; }
+
+/* Logo entrance */
+.nav-logo-img { animation: scaleIn 0.6s 0.12s cubic-bezier(.2,.9,.3,1) both; }
+
+/* Button micro-interactions */
+.btn-primary, .btn-white, .btn-outline-white, .btn-wa, .nav-cta-btn {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
+  will-change: transform;
+}
+.btn-primary:active, .btn-white:active, .btn-wa:active { transform: translateY(1px) scale(0.998); }
+
+/* Social icon hover */
+.footer-social { transition: transform 0.18s ease, background-color 0.18s ease; }
+.footer-social:hover { transform: translateY(-4px) scale(1.04); }
+
+/* Hero image subtle parallax on hover */
+.hero-card-img-img { transform-origin: center; }
+.hero-card-img:hover .hero-card-img-img { transform: scale(1.02); }
+
+/* Property card entrance smoothing */
+.prop-card { will-change: transform, opacity; }
+
+/* Small attention animation for CTA buttons */
+@keyframes pulseLift {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+.btn-primary.pulse { animation: pulseLift 2.6s ease-in-out infinite; }
+
+
+/* Utility animation classes */
+.animate-fadeUp { animation: fadeUp 0.7s var(--delay, 0s) ease both; }
+.animate-fadeIn { animation: fadeIn 0.6s var(--delay, 0s) ease both; }
+.animate-scaleIn { animation: scaleIn 0.6s var(--delay, 0s) cubic-bezier(.2,.9,.3,1) both; }
+.animate-slideRight { animation: slideRight 0.7s var(--delay, 0s) ease both; }
+
+/* Stagger helper: set --delay on children, e.g. style={{'--delay': '0.12s'}} */
+.stagger > * { opacity: 0; transform: translateY(12px); }
+.stagger > *.animate-fadeIn,
+.stagger > *.animate-fadeUp,
+.stagger > *.animate-scaleIn,
+.stagger > *.animate-slideRight { opacity: 1; transform: none; }
+
+/* Logo entrance */
+.nav-logo-img { animation: scaleIn 0.6s 0.12s cubic-bezier(.2,.9,.3,1) both; }
+
+/* Button micro-interactions */
+.btn-primary, .btn-white, .btn-outline-white, .btn-wa, .nav-cta-btn {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
+  will-change: transform;
+}
+.btn-primary:active, .btn-white:active, .btn-wa:active { transform: translateY(1px) scale(0.998); }
+
+/* Social icon hover */
+.footer-social { transition: transform 0.18s ease, background-color 0.18s ease; }
+.footer-social:hover { transform: translateY(-4px) scale(1.04); }
+
+/* Hero image subtle parallax on hover */
+.hero-card-img-img { transform-origin: center; }
+.hero-card-img:hover .hero-card-img-img { transform: scale(1.02); }
+
+/* Property card entrance smoothing */
+.prop-card { will-change: transform, opacity; }
+
+/* Small attention animation for CTA buttons */
+@keyframes pulseLift {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+.btn-primary.pulse { animation: pulseLift 2.6s ease-in-out infinite; }
+

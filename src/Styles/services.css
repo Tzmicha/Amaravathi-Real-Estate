@@ -1,0 +1,56 @@
+﻿.serv-section {
+  background: var(--cream2);
+}
+
+.serv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.serv-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 22px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.serv-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200,98,74,0.3);
+  box-shadow: 0 16px 40px var(--shadow);
+}
+
+.serv-card:hover .serv-icon {
+  background: var(--terracotta-pale);
+}
+
+.serv-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: 0 auto 16px;
+  transition: background 0.3s;
+  border: 1px solid var(--border);
+}
+
+.serv-name {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.serv-desc {
+  font-size: 12.5px;
+  color: var(--stone);
+  line-height: 1.6;
+}

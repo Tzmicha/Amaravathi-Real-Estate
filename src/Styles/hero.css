@@ -1,0 +1,352 @@
+﻿.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+  padding-top: 72px;
+}
+
+.hero-blob1,
+.hero-blob2 {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-blob1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(200, 98, 74, 0.08) 0%,
+    transparent 70%
+  );
+  top: -100px;
+  right: -100px;
+}
+
+.hero-blob2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(107, 143, 113, 0.08) 0%,
+    transparent 70%
+  );
+  bottom: 0;
+  left: 0;
+}
+
+.hero-dots {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 14px;
+  opacity: 0.15;
+}
+
+.hero-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--terracotta);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 0 6%;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--terracotta-pale);
+  border: 1px solid rgba(200, 98, 74, 0.2);
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--terracotta);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(44px, 5.5vw, 72px);
+  line-height: 1.08;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--charcoal);
+}
+
+.hero-title .accent {
+  color: var(--terracotta);
+  font-style: italic;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--stone);
+  line-height: 1.75;
+  max-width: 420px;
+  margin-bottom: 36px;
+  font-weight: 400;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.btn-primary {
+  background: var(--terracotta);
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary:hover {
+  background: #b5553d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(200, 98, 74, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--charcoal);
+  border: 1.5px solid var(--stone-light);
+  padding: 13px 28px;
+  border-radius: 6px;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+
+.btn-secondary:hover {
+  border-color: var(--terracotta);
+  color: var(--terracotta);
+  transform: translateY(-2px);
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.trust-faces {
+  display: flex;
+}
+
+.trust-face {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2.5px solid var(--warm-white);
+  margin-left: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background: var(--cream2);
+}
+
+.trust-text {
+  font-size: 13px;
+  color: var(--stone);
+  line-height: 1.4;
+}
+
+.trust-text strong {
+  color: var(--charcoal);
+  font-weight: 600;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.hero-main-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow:
+    0 20px 60px var(--shadow),
+    0 4px 16px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  animation: scaleIn 0.8s 0.3s ease both;
+}
+
+.hero-card-img {
+  height: 280px;
+  background: linear-gradient(135deg, #d4b896, #c4a07a, #b08060);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card-img-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease, filter 0.3s ease;
+}
+
+.hero-card-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.28));
+  pointer-events: none;
+}
+
+.hero-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: #fff;
+}
+
+.hero-card-overlay__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(44, 44, 44, 0.7));
+  padding: 20px;
+  color: #fff;
+}
+
+.hero-card-body {
+  padding: 20px;
+}
+
+.hero-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-card-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hero-card-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--terracotta);
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero-card-loc {
+  font-size: 13px;
+  color: var(--stone);
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.hero-card-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-tag {
+  background: var(--sage-pale);
+  color: var(--sage);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.floating-pill {
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px var(--shadow);
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.pill-tl {
+  top: -16px;
+  left: -24px;
+  animation: float 5s ease-in-out infinite;
+}
+
+.pill-br {
+  bottom: -16px;
+  right: -24px;
+  animation: float 5s 1.5s ease-in-out infinite;
+}
+
+.pill-icon {
+  font-size: 18px;
+}
+
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+}
+.hero-visual {
+  position: relative;
+}
+
+.hero-main-card {
+  position: relative;
+  z-index: 1;
+}
+
+.floating-pill {
+  position: absolute;
+  z-index: 10;
+}
